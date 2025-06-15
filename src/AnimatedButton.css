@@ -1,0 +1,63 @@
+.animated-button-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.animated-button {
+    /* --- Basic button styling --- */
+    padding: 15px 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #5fbcfa;
+    /* The color of your text */
+    border: 3px solid #5fbcfa;
+    border-radius: 10px;
+    background-color: transparent;
+    /* Start with no background */
+    cursor: pointer;
+
+    /* --- Positioning and Layering --- */
+    position: relative;
+    /* This is essential! */
+    z-index: 1;
+    /* Puts the button's content (text) on a higher layer */
+    overflow: hidden;
+    /* A good practice to keep the ::before from spilling out */
+    transition: color 0.3s ease;
+}
+
+.animated-button:hover{
+    /* --- Optional: Add a hover effect for the button itself --- */
+    color: #fff;
+}
+
+.animated-button::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    /* Puts this behind the text */
+
+    /* --- HINT: Make this fill the entire button --- */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #5fbcfa;
+    transform: scaleX(0);
+    transform-origin: left;
+    /* <-- This is the key for the wipe effect */
+
+    /* --- Add the transition --- */
+    transition: transform 0.4s ease;
+}
+
+.animated-button:hover::before {
+    /* --- HINT: Animate it to its full width on hover --- */
+    transform: scaleX(1);
+}

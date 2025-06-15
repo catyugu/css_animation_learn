@@ -1,0 +1,37 @@
+.plus-to-minus-root-container{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgb(250, 253, 237);
+}
+/* In the default state, style these two lines to form a plus sign (+). */
+.plus-to-minus-vertical{
+    position: absolute;
+    width: 300px;
+    height: 20px;
+    transform: translateY(140px);
+    transform-origin: center;
+    background-color: rgb(255, 80, 80);
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+
+} 
+.plus-to-minus-horizontal{ 
+    position: absolute;
+    width: 20px;
+    height: 300px;
+    transform: translateX(140px);
+    transform-origin: center;
+    background-color: rgb(255, 80, 80);
+    transition: transform 0.5s ease-in-out;
+}
+
+.plus-to-minus-container.is-active .plus-to-minus-vertical{
+    transform: rotate(90deg) translateX(140px);
+    transform-origin: center;
+    opacity: 0;
+}
+.plus-to-minus-container.is-active .plus-to-minus-horizontal{
+    transform: rotate(90deg) translateY(-140px);
+    transform-origin: center;
+}

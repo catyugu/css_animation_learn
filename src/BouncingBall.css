@@ -1,0 +1,25 @@
+.bouncing-ball-container {
+    width: 400px;
+    height: 400px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(350px);
+    }
+}
+
+.bouncing-ball {
+    width: 50px;
+    height: 50px;
+    background-color: coral;
+    border-radius: 50%;
+    animation: bounce 1s ease-in infinite alternate;
+}
