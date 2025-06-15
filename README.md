@@ -59,9 +59,8 @@ The "drawing" effects are achieved with a standard, reliable SVG animation techn
 
 ### To view and interact with the component  
 
-1. Open the `index.html` file in a modern web browser.  
-2. Trigger the Loading State: Add the class `is-loading` to the `<button>` element using the browser's developer tools.  
-3. Trigger the Success State: Remove the `is-loading` class and add the `is-success` class to the `<button>` element.  
+1. run command `npm run dev`
+2. Open your browser and go to `http://localhost:5173` or other port if it is changed
 
 ### Test Accessibility  
 
